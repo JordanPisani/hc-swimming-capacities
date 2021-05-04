@@ -10,3 +10,10 @@ $primary: #054173 !default;
 $enable-rounded: false !default;
 
 @import 'bootstrap';
+
+body,
+#app {
+  background: transparent;
+  // background-color: #f5f7f8;
+  background-color: transparent;
+}

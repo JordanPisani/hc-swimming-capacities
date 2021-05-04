@@ -1,5 +1,5 @@
 {
-  "name": "hc-vite-template",
+  "name": "hc-swimming-capacities",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -8,9 +8,11 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta3",
     "iframe-resizer": "^4.3.1",
-    "vue": "^3.0.5"
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.2.1",
