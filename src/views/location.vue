@@ -11,7 +11,9 @@
       :key="id"
       class="alert text-center d-flex flex-column flex-md-row justify-content-between"
       :class="
-        fields.CapacityReached || fields.Available <= 0
+        fields.InclementWeather ||
+        fields.CapacityReached ||
+        fields.Available <= 0
           ? 'alert-warning'
           : 'alert-primary'
       "
@@ -23,12 +25,15 @@
         {{ fields.Times }}
       </span>
 
-      <strong v-if="fields.CapacityReached || fields.Available <= 0">
+      <strong v-if="fields.InclementWeather"> Severe Weather </strong>
+      <strong v-else-if="fields.CapacityReached || fields.Available <= 0">
         Capacity Limit Reached
       </strong>
 
       <span>
-        {{ fields.Available }} / {{ fields.Capacity }} Swimming Slots Available
+        <span v-if="!fields.CapacityReached && fields.Available > 0">~</span>
+        {{ fields.CapacityReached ? 0 : fields.Available }} /
+        {{ fields.Capacity }} Swimming Slots Available
       </span>
     </div>
   </div>
