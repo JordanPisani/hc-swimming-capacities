@@ -9,7 +9,7 @@ const routes = [
     component: Home,
   },
   {
-    path: '/:sitecoreItemId',
+    path: "/:contentstackUid",
     name: 'Location',
     component: Location,
     props: true,

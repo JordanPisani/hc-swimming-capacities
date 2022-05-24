@@ -48,11 +48,11 @@ import { sessions, fetchSessions } from '../lib/sessions'
 
 export default {
   props: {
-    sitecoreItemId: String,
+    contentstackUid: String,
   },
 
   setup(props) {
-    fetchSessions(props.sitecoreItemId)
+    fetchSessions(props.contentstackUid);
 
     return { sessions }
   },

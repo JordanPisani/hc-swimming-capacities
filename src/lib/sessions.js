@@ -7,12 +7,12 @@ export const sessions = reactive({
   data: [],
 })
 
-export async function fetchSessions(sitecoreItemId) {
+export async function fetchSessions(contentstackUid) {
   sessions.loading = true
   try {
     const { data } = await airtable.get(`/sessions`, {
       params: {
-        filterByFormula: `'${sitecoreItemId}' = ARRAYJOIN({LocationGUID})`,
+        filterByFormula: `'${contentstackUid}' = ARRAYJOIN({LocationUID})`,
         view: 'Grid view',
       },
     })
